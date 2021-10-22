@@ -194,7 +194,12 @@ In the code chunk below, create a vector (using `c()`, as above) stored as `some
 
 ```{r}
 # Your code here: 
+some_dates <- c(05152020, 06242020, 07092020)
 
+some_dates_new <- mdy(some_dates)
+
+some_dates_new
+class(some_dates_new)
 
 ```
 
