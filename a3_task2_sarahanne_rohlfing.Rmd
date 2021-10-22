@@ -58,7 +58,10 @@ Make sure to `View()` the resulting data frame (remember: run `View()` in the Co
 
 ```{r}
 # Your code here: 
-
+sw_sep_names <- starwars %>% 
+  separate(col = name, 
+           into = c("name_1", "name_2"),
+           sep = "-") 
 
 ```
 
@@ -92,8 +95,12 @@ Make sure to `View()` the resulting data frame (remember: run `View()` in the Co
 
 ```{r}
 # Your code here:
-
-
+sw_skin_sep <- starwars %>% 
+  separate(col = skin_color,
+           into = c("skin_1", "skin_2"),
+           sep = ",",
+           extra = "merge",
+           remove = FALSE)
 ```
 
 ### 2. `tidyr::unite()`
@@ -128,7 +135,10 @@ In the code chunk below, starting from the `mpg` data create a new data frame ca
 
 ```{r}
 # Your code here: 
-
+mpg_model_class <- mpg %>% 
+  unite(col = model_class,
+        c(model, class),
+        sep = "-")
 
 ```
 
