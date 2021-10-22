@@ -300,7 +300,9 @@ Note: If you add another condition within `case_when()` that is `TRUE ~ "some th
 
 ```{r}
 # Your code here: 
-
+storms_danger <- storms %>% 
+  mutate(danger = case_when(status == "hurricane" ~ "high",
+                            TRUE ~ "moderate"))
 
 ```
 
