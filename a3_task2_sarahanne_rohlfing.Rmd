@@ -169,7 +169,7 @@ In the code chunk below, use `ymd()` to convert a date that you choose in `YYYY-
 ```{r}
 # Your code here: 
 
-
+ymd("1992/06/09")
 ```
 
 #### 3B. Follow me
