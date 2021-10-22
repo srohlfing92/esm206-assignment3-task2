@@ -243,6 +243,13 @@ Starting from the `lakers` dataset, create a new dataset called `gasol_hookshots
 
 ```{r}
 # Your code here: 
+gasol_hookshots <- lakers %>% 
+  filter(player =="Pau Gasol") %>% 
+  filter(type == "hook") %>% 
+  mutate(date = ymd(date)) %>% 
+  mutate(month = month(date)) %>% 
+  count(month)
+
 
 
 ```
